@@ -165,7 +165,11 @@ export type VNodeArrayChildren = Array<VNodeArrayChildren | VNodeChildAtom>;
 export type VNodeChild = VNodeChildAtom | VNodeArrayChildren;
 type VNodeChildAtom = VNode | string;
 
-export function createVNode(..){..} // 省略
+export function createVNode(
+  type: VNodeTypes,
+  props: VNodeProps | null,
+  children: VNodeNormalizedChildren,
+): VNode {..} // 省略
 
 // normalize 関数を実装。(renderer.tsで使う)
 export function normalizeVNode(child: VNodeChild): VNode {
