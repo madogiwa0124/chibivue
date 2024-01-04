@@ -239,7 +239,7 @@ export interface VNode<HostNode = RendererNode> {
   type: VNodeTypes;
   props: VNodeProps | null;
   children: VNodeNormalizedChildren;
-  el: HostNode | undefined; // [!code++]
+  el: HostNode | undefined; // [!code ++]
 }
 ```
 
