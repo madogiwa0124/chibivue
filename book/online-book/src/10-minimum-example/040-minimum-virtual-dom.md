@@ -342,6 +342,11 @@ return function createApp(rootComponent) {
 ```
 
 ```ts
+export type RootRenderFunction<HostElement = RendererElement> = (
+  vnode: Component,
+  container: HostElement,
+) => void
+
 const render: RootRenderFunction = (rootComponent, container) => {
   const componentRender = rootComponent.setup!();
 
