@@ -49,5 +49,10 @@ jobs:
         run: pnpm lint:text
       - name: check types
         run: pnpm tsc --noEmit
+      - name: check types in sample codes
+        run: |
+          git ls-files -- book/impls/ | 
+          grep "tsconfig.json" | sed 's/tsconfig.json//' | 
+          xargs -I {} sh -c "cd {}; echo \"\n\"; pwd; pnpm install; pnpm tsc --noEmit"
       - name: check building
         run: pnpm build
