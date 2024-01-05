@@ -385,7 +385,6 @@ function parseElement(
   ancestors: ElementNode[]
 ): ElementNode | undefined {
   // Start tag.
-  const parent = last(ancestors);
   const element = parseTag(context, TagType.Start); // TODO:
 
   // If it is a self-closing element like <img />, we end here (since there are no children or end tag).
