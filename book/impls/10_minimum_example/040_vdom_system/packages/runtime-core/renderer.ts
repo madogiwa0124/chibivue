@@ -126,7 +126,6 @@ export function createRenderer(options: RendererOptions) {
     const componentRender = rootComponent.setup!()
 
     let n1: VNode | null = null
-    let n2: VNode = null!
 
     const updateComponent = () => {
       const n2 = componentRender()
