@@ -108,7 +108,7 @@ Contents of tsconfig.json
     "paths": {
       "chibivue": ["./packages"]
     },
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "allowJs": true,
     "esModuleInterop": true
   },

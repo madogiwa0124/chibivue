@@ -7,7 +7,7 @@
     "paths": {
       "hyper-ultimate-super-extreme-minimal-vue": ["./packages"]
     },
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "allowJs": true,
     "esModuleInterop": true
   },
