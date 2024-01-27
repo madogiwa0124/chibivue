@@ -250,7 +250,6 @@ function parseElement(
   ancestors: ElementNode[],
 ): ElementNode | undefined {
   // Start tag.
-  const parent = last(ancestors)
   const element = parseTag(context, TagType.Start) // TODO:
 
   if (element.isSelfClosing) {
