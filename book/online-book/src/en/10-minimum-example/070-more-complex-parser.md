@@ -346,6 +346,13 @@ function advanceBy(context: ParserContext, numberOfCharacters: number): void {
   context.source = source.slice(numberOfCharacters)
 }
 
+function advanceSpaces(context: ParserContext): void {
+  const match = /^[\t\r\n\f ]+/.exec(context.source);
+  if (match) {
+    advanceBy(context, match[0].length);
+  }
+}
+
 // Although it is a bit long, it simply calculates the position.
 // It destructively updates the pos object received as an argument.
 function advancePositionWithMutation(

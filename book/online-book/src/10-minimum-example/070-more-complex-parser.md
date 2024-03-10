@@ -345,6 +345,13 @@ function advanceBy(context: ParserContext, numberOfCharacters: number): void {
   context.source = source.slice(numberOfCharacters)
 }
 
+function advanceSpaces(context: ParserContext): void {
+  const match = /^[\t\r\n\f ]+/.exec(context.source);
+  if (match) {
+    advanceBy(context, match[0].length);
+  }
+}
+
 // 少し長いですが、やっていることは単純で、 pos の計算を行っています。
 // 引数でもらった pos のオブジェクトを破壊的に更新しています。
 function advancePositionWithMutation(
