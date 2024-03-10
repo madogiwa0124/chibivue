@@ -306,7 +306,7 @@ function isEnd(context: ParserContext, ancestors: ElementNode[]): boolean {
 
 ## parseText
 
-まずはシンプルな parseText の方から.一部、parseText 以外でも使うユーティリティも実装しているので少しだけ長いです。
+まずはシンプルな parseText の方から実装していきます。一部、parseText 以外でも使うユーティリティも実装しているので少しだけ長いです。
 
 ```ts
 function parseText(context: ParserContext): TextNode {
