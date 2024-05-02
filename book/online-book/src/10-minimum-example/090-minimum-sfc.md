@@ -226,6 +226,13 @@ pwd # ~
 rm -rf ./plugin-sample
 ```
 
+また Vite の plugin を作成するため Vite 本体をインストールしておきます。
+
+```sh
+pwd # ~
+ni vite
+```
+
 plugin の本体なのですが、本来これは vuejs/core の範囲外なので packages に`@extensions`というディレクトリを切ってそこに実装していきます。
 
 ```sh
