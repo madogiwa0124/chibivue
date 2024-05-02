@@ -786,6 +786,31 @@ export const generate = (
 // .
 // .
 
+const genNode = (
+  node: TemplateChildNode,
+  option: Required<CompilerOptions>,
+): string => {
+  switch (node.type) {
+    case NodeTypes.ELEMENT:
+      return genElement(node, option)
+    case NodeTypes.TEXT:
+      return genText(node)
+    case NodeTypes.INTERPOLATION:
+      return genInterpolation(node, option)
+    default:
+      return ''
+  }
+}
+
+const genElement = (
+  el: ElementNode,
+  option: Required<CompilerOptions>,
+): string => {
+  return `h("${el.tag}", {${el.props
+    .map(prop => genProp(prop, option))
+    .join(', ')}}, [${el.children.map(it => genNode(it, option)).join(', ')}])`
+}
+
 const genProp = (
   prop: AttributeNode | DirectiveNode,
   option: Required<CompilerOptions>,
