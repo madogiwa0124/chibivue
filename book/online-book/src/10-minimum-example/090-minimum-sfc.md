@@ -97,7 +97,7 @@ vite のプラグインを書いたことのない方も少ないと思うので
 
 ```sh
 pwd # ~
-pnpx create-vite
+nlx create-vite
 ## ✔ Project name: … plugin-sample
 ## ✔ Select a framework: › Vue
 ## ✔ Select a variant: › TypeScript

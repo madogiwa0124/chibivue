@@ -96,7 +96,7 @@ Since there may be few people who have never written a Vite plugin, let's start 
 
 ```sh
 pwd # ~
-pnpx create-vite
+nlx create-vite
 ## ✔ Project name: … plugin-sample
 ## ✔ Select a framework: › Vue
 ## ✔ Select a variant: › TypeScript
